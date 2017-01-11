@@ -1,0 +1,19 @@
+{
+  "name": "client",
+  "version": "0.0.0",
+  "description": "",
+  "main": " ",
+  "scripts": {
+    "build": "./node_modules/.bin/browserify script.js -o bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "sharedb-string-binding": "~1.0.0",
+    "sharedb": "~1.0.0-beta.7"
+  }
+}

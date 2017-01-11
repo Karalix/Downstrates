@@ -1,0 +1,27 @@
+body{
+    background-color: lightgrey;
+    padding: 10px;
+}
+
+#editable-document{
+    background-color: white;
+    padding: 20px;
+    border-radius: 2px;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    font-family: "Lucida Console", monospace;
+    float: left;
+    width: 40%;
+    overflow: hidden;
+}
+
+#viewable-document{
+    margin-left: 5px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 2px;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    float: left;
+    width: 40%;
+    overflow: hidden;
+}
