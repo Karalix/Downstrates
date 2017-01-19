@@ -8,10 +8,12 @@ var connection = new sharedb.Connection(socket);
 // Create local Doc instance mapped to 'examples' collection document with id 'textarea'
 var doc = connection.get('examples', 'textarea');
 doc.subscribe(function(err) {
-  if (err) throw err;
-  var element = document.getElementById('editable-document');
-  var binding = new StringBinding(element, doc);
-  binding.setup();
+    if (err) throw err;
+    var element = document.getElementById('editable-document');
+    var binding = new StringBinding(element, doc);
+    binding.setup();
+    documentChange();
+    doc.on('op',documentChange);
 });
 
 
@@ -32,7 +34,6 @@ var documentChange = function(){
     document.getElementById('viewable-document').innerHTML = markdown.toHTML(extractedText);
 }
 
-doc.on('op',documentChange);
 
 document.getElementById('button-emphasize').onclick = emphasize ;
 
