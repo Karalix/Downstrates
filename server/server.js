@@ -18,6 +18,11 @@ function createDoc(callback) {
                   doc.create('Type here', callback);
                   return;
               }
+              // test adding chat
+              if (chat.type == null){
+                  chat.create('Chat test', callback);
+                  return;
+              }
               callback();
     });
     
