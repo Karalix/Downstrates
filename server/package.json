@@ -6,8 +6,9 @@
   "dependencies": {
     "express": "~4.14.0",
     "http": "~0.0.0",
-    "websocket-json-stream": "~0.0.3",
     "sharedb": "~1.0.0-beta.7",
+    "sharedb-mongo": "^1.0.0-beta.3",
+    "websocket-json-stream": "~0.0.3",
     "ws": "~1.1.1"
   },
   "devDependencies": {},

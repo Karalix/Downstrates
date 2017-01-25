@@ -4,25 +4,31 @@ var ShareDB = require('sharedb');
 var WebSocket = require('ws');
 var WebSocketJSONStream = require('websocket-json-stream');
 
-var backend = new ShareDB();
+// Maybe the mongo creation should also be in the startServer function?
+const db = require('sharedb-mongo')('mongodb://localhost:27017/test');
+const backend = new ShareDB({db});
+
 createDoc(startServer);
 
 // Create initial document then fire callback
 function createDoc(callback) {
     var connection = backend.connect();
     var doc = connection.get('examples', 'textarea');
-    var chat = connection.get('chat', 'chat-msg');
+    // mongodb -> o_examples
+    // var chat = connection.get('chat', 'chat-msg');
     doc.fetch(function(err) {
         if (err) throw err;
               if (doc.type === null) {
                   doc.create('Type here', callback);
                   return;
               }
+              /*
               // test adding chat
               if (chat.type == null){
                   chat.create('Chat test', callback);
                   return;
               }
+              */
               callback();
     });
     
@@ -30,10 +36,11 @@ function createDoc(callback) {
         console.log(doc.data);
     })
     
-    
+    /*
     chat.on('op', function(){
         console.log(chat.data);
     })
+    */
 }
 
 function startServer() {

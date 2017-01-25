@@ -16,6 +16,7 @@ doc.subscribe(function(err) {
     doc.on('op',documentChange);
 });
 
+/*
 // Create local Chat instance
 var chat = connection.get('chat', 'chat-msg');
 doc.subscribe(function(err){
@@ -26,6 +27,7 @@ doc.subscribe(function(err){
     chatChange();
     chat.on('op', chatChange);
 });
+*/
 
 
 var emphasize = function(mouseEvent){
@@ -44,11 +46,13 @@ var documentChange = function(){
     document.getElementById('viewable-document').innerHTML = markdown.toHTML(extractedText);
 }
 
+/*
 var chatChange = function(){
     var chatMsg = document.getElementById('chat').innerText;
 }
+*/
 
 document.getElementById('button-emphasize').onclick = emphasize ;
 
 document.getElementById('editable-document').oninput = documentChange ;
-document.getElementById('chat').oninput = chatChange;
+// document.getElementById('chat').oninput = chatChange;
