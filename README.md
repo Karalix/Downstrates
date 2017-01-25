@@ -16,13 +16,14 @@ Go to the *client* folder and type
 
 ```console
 npm install
+npm build
 ```
 
 After the dependencies installation, the server can be launched:
 While in the *server* folder type:
 
 ```console
-node server.js
+npm start
 ```
 
 The console should show that the server is listening on port 8080.
