@@ -16,7 +16,7 @@ Go to the *client* folder and type
 
 ```console
 npm install
-npm build
+npm run build
 ```
 
 After the dependencies installation, the server can be launched:
