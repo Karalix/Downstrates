@@ -3640,10 +3640,15 @@ var StringBinding = require('sharedb-string-binding');
 var socket = new WebSocket('ws://' + window.location.host);
 var connection = new sharedb.Connection(socket);
 
+var pathname = window.location.pathname;
+pathname = pathname.replace(/\//g, '');
 // Create local Doc instance mapped to 'examples' collection document with id 'textarea'
-var doc = connection.get('examples', 'textarea');
+var doc = connection.get('examples', pathname);
 doc.subscribe(function(err) {
     if (err) throw err;
+    if (doc.type === null) {
+        doc.create('Type here');
+    }
     var element = document.getElementById('editable-document');
     var binding = new StringBinding(element, doc);
     binding.setup();
@@ -3651,6 +3656,18 @@ doc.subscribe(function(err) {
     doc.on('op',documentChange);
 });
 
+/*
+// Create local Chat instance
+var chat = connection.get('chat', 'chat-msg');
+doc.subscribe(function(err){
+    if (err) throw err;
+              var chatlist = document.getElementById('chat');
+    var binding = new StringBinding(chatlist, chat);
+    binding.setup();
+    chatChange();
+    chat.on('op', chatChange);
+});
+*/
 
 
 var emphasize = function(mouseEvent){
@@ -3669,9 +3686,15 @@ var documentChange = function(){
     document.getElementById('viewable-document').innerHTML = markdown.toHTML(extractedText);
 }
 
+/*
+var chatChange = function(){
+    var chatMsg = document.getElementById('chat').innerText;
+}
+*/
 
 document.getElementById('button-emphasize').onclick = emphasize ;
 
 document.getElementById('editable-document').oninput = documentChange ;
+// document.getElementById('chat').oninput = chatChange;
 
 },{"sharedb-string-binding":3,"sharedb/lib/client":7}]},{},[18]);
