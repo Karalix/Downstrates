@@ -5,10 +5,15 @@ var StringBinding = require('sharedb-string-binding');
 var socket = new WebSocket('ws://' + window.location.host);
 var connection = new sharedb.Connection(socket);
 
+var pathname = window.location.pathname;
+pathname = pathname.replace(/\//g, '');
 // Create local Doc instance mapped to 'examples' collection document with id 'textarea'
-var doc = connection.get('examples', 'textarea');
+var doc = connection.get('examples', pathname);
 doc.subscribe(function(err) {
     if (err) throw err;
+    if (doc.type === null) {
+        doc.create('Type here');
+    }
     var element = document.getElementById('editable-document');
     var binding = new StringBinding(element, doc);
     binding.setup();

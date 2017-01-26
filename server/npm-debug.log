@@ -1,5 +1,5 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'start' ]
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'start' ]
 2 info using npm@4.0.5
 3 info using node@v7.4.0
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
@@ -7,8 +7,8 @@
 6 silly lifecycle server@0.0.0~prestart: no script for prestart, continuing
 7 info lifecycle server@0.0.0~start: server@0.0.0
 8 verbose lifecycle server@0.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle server@0.0.0~start: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/home/dgabriel/git/Downstrates/server/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
-10 verbose lifecycle server@0.0.0~start: CWD: /home/dgabriel/git/Downstrates/server
+9 verbose lifecycle server@0.0.0~start: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/mnt/e/Documents/M2/Downstrates/server/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+10 verbose lifecycle server@0.0.0~start: CWD: /mnt/e/Documents/M2/Downstrates/server
 11 silly lifecycle server@0.0.0~start: Args: [ '-c', 'node server.js' ]
 12 silly lifecycle server@0.0.0~start: Returned: code: 1  signal: null
 13 info lifecycle server@0.0.0~start: Failed to exec start script
@@ -23,9 +23,9 @@
 14 verbose stack     at maybeClose (internal/child_process.js:885:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid server@0.0.0
-16 verbose cwd /home/dgabriel/git/Downstrates/server
-17 error Linux 4.9.2-1-MANJARO
-18 error argv "/usr/bin/node" "/usr/bin/npm" "start"
+16 verbose cwd /mnt/e/Documents/M2/Downstrates/server
+17 error Linux 3.4.0+
+18 error argv "/usr/bin/nodejs" "/usr/bin/npm" "start"
 19 error node v7.4.0
 20 error npm  v4.0.5
 21 error code ELIFECYCLE
