@@ -7,6 +7,14 @@ var connection = new sharedb.Connection(socket);
 
 var pathname = window.location.pathname;
 pathname = pathname.replace(/\//g, '');
+
+var myWidgets = [];
+
+var myFormerWidgets = JSON.parse(localStorage.getItem('myWidgets'));
+
+myFormerWidgets === null ? console.log('No prior widget found') : myWidgets = myFormerWidgets;
+
+
 // Create local Doc instance mapped to 'examples' collection document with id 'textarea'
 var doc = connection.get('examples', pathname);
 doc.subscribe(function(err) {
@@ -35,17 +43,6 @@ doc.subscribe(function(err){
 */
 
 
-var emphasize = function(mouseEvent){
-    var selectedContent = window.getSelection();
-    var selectedRange = selectedContent.getRangeAt(0);
-    console.log(selectedRange.cloneContents());
-    var oldText = selectedRange.cloneContents().textContent;
-    selectedRange.deleteContents('');
-    selectedRange.insertNode(document.createTextNode('_'+oldText+'_'));
-
-    document.getElementById('editable-document').dispatchEvent(new Event('input'));
-}
-
 var documentChange = function(){
     var extractedText = document.getElementById('editable-document').innerText;
     document.getElementById('viewable-document').innerHTML = markdown.toHTML(extractedText);
@@ -57,7 +54,59 @@ var chatChange = function(){
 }
 */
 
-document.getElementById('button-emphasize').onclick = emphasize ;
-
 document.getElementById('editable-document').oninput = documentChange ;
 // document.getElementById('chat').oninput = chatChange;
+/*
+window.onload = function(){
+
+    var em_script = document.createElement('script');
+    em_script.src = '/static/em_button.js';
+
+    document.getElementById('editable-editor').insertBefore(em_script, document.getElementById('editable-editor').childNodes[0]);
+}
+*/
+// Ui add modal stuff
+
+var modal = document.getElementById('ui-add-modal');
+var btn = document.getElementById("ui-add-button");
+var closeButton = document.getElementById("close-button");
+var widgetUrlButton = document.getElementById('widget-url-button');
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+var closeModale = function() {
+    modal.style.display = "none";
+}
+
+closeButton.onclick = closeModale;
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+widgetUrlButton.onclick = function() {
+    var widgetUrl = document.getElementById('widget-url-input').value;
+    addWidget(widgetUrl);
+
+    myWidgets.push(widgetUrl);
+    localStorage.setItem('myWidgets',JSON.stringify(myWidgets));
+
+    document.getElementById('widget-url-input').value = "";
+    closeModale();
+}
+
+var addWidget = function(widgetUrl) {
+    
+    var em_script = document.createElement('script');
+    em_script.src = widgetUrl;
+    document.getElementById('editable-editor').insertBefore(em_script, document.getElementById('editable-editor').childNodes[0]);
+}
+
+
+myWidgets.forEach(function(widget){
+    addWidget(widget);
+})

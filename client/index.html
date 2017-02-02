@@ -6,8 +6,19 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+    <div id="ui-add-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-button">&times;</span>
+            <input id="widget-url-input" placeholder="Copy the widget url here"></input>
+            <button id="widget-url-button">Import widget</button>
+        </div>
+    </div>
     <div id="editable-editor">
-        <button id="button-emphasize">Emphasize</button>
+        <span>
+        <button id="ui-add-button">
+            Add...
+        </button>
+        </span>
     </div>
     <div id="editable-document" contenteditable="true">Edit me ! This is strong
     </div>
