@@ -4,7 +4,7 @@
   "description": "",
   "main": " ",
   "scripts": {
-    "build": "./node_modules/.bin/browserify script.js -o bundle.js",
+    "build": "./node_modules/.bin/browserify script-editor.js -o bundle-editor.js ; ./node_modules/.bin/browserify script-reader.js -o bundle-reader.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

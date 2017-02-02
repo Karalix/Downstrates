@@ -11,9 +11,15 @@ const backend = new ShareDB({db});
 
 // Create a web server to serve files and listen to WebSocket connections
 var app = express();
-//app.use('/',express.static('../client'));
+
 app.use('/static',express.static('../client'));
-app.use(/..+/,express.static('../client'));
+
+app.get(/edit\/..+/,function(req, res){
+    res.sendFile('editor.html',{root:'../client'});
+});
+app.get(/read\/..+/,function(req, res){
+    res.sendFile('reader.html',{root:'../client'});
+});
 app.get('/', function(req, res){
     res.redirect('/static');
 });
