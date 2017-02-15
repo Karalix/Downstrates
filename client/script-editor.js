@@ -57,6 +57,8 @@ var chatChange = function(){
 */
 
 document.getElementById('editable-document').oninput = documentChange ;
+
+document.getElementById('ui-goto-read-button').onclick = function(){ window.location.href='/read/'+pathname;}
 // document.getElementById('chat').oninput = chatChange;
 /*
 window.onload = function(){
