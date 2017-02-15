@@ -1,0 +1,30 @@
+.editable-url-end {
+    color: blue;
+    text-decoration: underline;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: lightgray;
+    border-radius: 5px;
+    position: relative;
+    left: -7px;
+}
+
+.editable-edit-url {
+    color: blue;
+    text-decoration: underline;
+}
+
+.editable-read-url {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: blue;
+}
+
+body{
+    margin:0px;
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
