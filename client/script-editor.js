@@ -22,7 +22,7 @@ var doc = connection.get('examples', pathname);
 doc.subscribe(function(err) {
     if (err) throw err;
     if (doc.type === null) {
-        doc.create('Type here');
+        doc.create('This document is all new, what about modifying it at [this adress](/edit/'+pathname+') ?');
     }
     var element = document.getElementById('editable-document');
     var binding = new StringBinding(element, doc);

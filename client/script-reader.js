@@ -14,7 +14,7 @@ var doc = connection.get('examples', pathname);
 doc.subscribe(function(err) {
     if (err) throw err;
     if (doc.type === null) {
-        doc.create('Type here');
+        doc.create('This document is all new, what about modifying it at [this adress](/edit/'+pathname+') ?');
     }
     documentChange();
     doc.on('op',documentChange);
