@@ -21,7 +21,7 @@ app.get(/read\/..+/,function(req, res){
     res.sendFile('reader.html',{root:'../client'});
 });
 app.get('/', function(req, res){
-    res.redirect('/static');
+    res.redirect('/editor/newdoc');
 });
 
 var server = http.createServer(app);
