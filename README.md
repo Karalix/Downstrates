@@ -4,7 +4,7 @@ Collaborative editing using markdown.
 
 ## How to use
 
-First the dependencies should be installed. Make sure *npm* is installed.
+Make sure to have a recent version of Node.js and MongoDB installed.
 
 
 ```console
@@ -14,7 +14,7 @@ npm --prefix ./client run build
 npm --prefix ./server start
 ```
 
-The console should show that the server is listening on port 8080. Make sure the mongodb server you want to connect to is up and running !
+Make sure the mongodb server you want to connect to is up and running and the following should appear :
 
 ```console
 Listening on http://localhost:8080
