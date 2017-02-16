@@ -36,4 +36,5 @@ You can now open multiple tabs on *localhost:8080*
 
 You can create new documents by adding their name to the url (eg: http://localhost:8080/edit/newdoc)
 
-*newdoc* is the default document name
+You can also access the reading mode using the url http://localhost:8080/read/newdoc
+
