@@ -1,29 +1,17 @@
 # DownStrates
 
-Collaborative editor using markdown.
+Collaborative editing using markdown.
 
 ## How to use
 
 First the dependencies should be installed. Make sure *npm* is installed.
 
-Go to the *server* folder and type
 
 ```console
-npm install
-```
-
-Go to the *client* folder and type
-
-```console
-npm install
-npm run build
-```
-
-After the dependencies installation, the server can be launched:
-While in the *server* folder type:
-
-```console
-npm start
+npm --prefix ./server install
+npm --prefix ./client install
+npm --prefix ./client run build
+npm --prefix ./server start
 ```
 
 The console should show that the server is listening on port 8080. Make sure the mongodb server you want to connect to is up and running !
