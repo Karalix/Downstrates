@@ -27,7 +27,13 @@
     </div>
     <div id="viewable-document" ></div>
     <div id="chat"></div>
-    <script src="script-chat.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io.connect('http://localhost:8080');
+    </script>
+    <!--
+    <script src="chat.js"></script>
+    -->
     <script src="/static/markdown.js"></script>
     <script src="/static/bundle-editor.js"></script>
 </body>
