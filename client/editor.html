@@ -28,16 +28,24 @@
         <div id="viewable-document" ></div>
         <p>Your nickname: <input id="nickname" type="text" placeholder="Your nickname"/><button onclick='connect()'>Connect</button></p>
         <p>Your message: <input id="message" type="text" placeholder="Please type your beautiful message here"/><button onclick='sendMessage()'>Send</button></p>
-        <div id="chat"></div>
+        <div id="chat">
+            <p>Un paragraphe !</p>
+        </div>
         <script src="/socket.io/socket.io.js"></script>
         <script src="jquery-3.1.1.min.js"></script>
         <script type="text/javascript">
             function connect(){
-
+            console.log('ici');
             client = io();
-
-            $('#chat').append('<p>New user connected to server</p>');
-         }
+            //          $('#chat').append('<p>New user connected to server</p>');
+            var chat = document.getElementById('chat');
+            console.log(chat);
+            // var para = document.createElement("p");
+            // var text = document.createTextNode("Yollo");
+            // para.appendChild(text);
+            // div.appendChild(para);
+            chat.innerHTML += 'J'aime les chocapics !';
+            }
         </script>
         <script src="/static/markdown.js"></script>
         <script src="/static/bundle-editor.js"></script>

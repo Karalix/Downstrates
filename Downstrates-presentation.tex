@@ -1,0 +1,81 @@
+\documentclass[11pt]{beamer}
+\usepackage{fontspec}
+\usetheme{Copenhagen}
+\begin{document}
+	\author[M2 HCI 2016-2017]{Alix DUCROS \& Damien Gabriel}
+	\title{Downstrates: A collaborative markdown editor}
+	
+	%\logo{}
+	%\institute{}
+	\date{}
+	%\subject{}
+	%\setbeamercovered{transparent}
+	%\setbeamertemplate{navigation symbols}{}
+	
+	\begin{frame}[plain]
+		\maketitle
+		
+%		\begin{exampleblock}{Summary}
+%			Create a simple collaborative markdown editor with data persistence
+%		\end{exampleblock}
+%		\vspace{10pt}
+%		
+%		{\scriptsize  \texttt{Klokmose, C. N., Eagan, J. R., Baader, S., Mackay, W., \& Beaudouin-Lafon, M. (2015, November). Webstrates: shareable dynamic media. In Proceedings of the 28th Annual ACM Symposium on User Interface Software \& Technology (pp. 280-290). ACM.}}
+	\end{frame}
+	
+	\begin{frame}{Introduction}
+		\begin{itemize}
+			\item[What ?] Collaborative markdown editor
+			\item[Why ?] Learn CSCW tools hand-on
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Features}
+		\begin{itemize}
+			\item Markdown editor
+			\item Real-time
+			\item Shareable button
+			\item Data persistence
+		\end{itemize}
+	\end{frame}
+
+\begin{frame}{Demonstration}
+	place holder for image
+	\begin{center}
+		{\Huge And now, the demonstration!}
+	\end{center}
+\end{frame}
+
+\begin{frame}{usage summary}
+	As written in the README.md file:
+	\begin{enumerate}
+		\item launch a mongo instance
+		(on system using systemctl: systemctl start mongodb)
+		\item download all server and client required modules
+		(npm install)
+		\item build the client bundle
+		(npm run build)
+		\item launch the server
+		(npm run start)
+		\item Open a webrowser to http://localhost:8080
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Tools used}
+	\begin{description}
+		\item[Language:] Javascript (including client side using nodejs)
+		\item[Server:] express \& socket.io
+		\item[Markdown:]
+		\item[Real-time:] sharedb
+		\item[Data persistence:] sharedb-mongo
+	\end{description}
+\end{frame}
+
+\begin{frame}{What is working}
+	Everything ;)
+\end{frame}
+
+\begin{frame}{What can be improved?}
+	Nothing ;)
+\end{frame}
+\end{document}

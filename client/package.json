@@ -4,7 +4,7 @@
   "description": "",
   "main": " ",
   "scripts": {
-    "build": "./node_modules/.bin/browserify script-editor.js -o bundle-editor.js ; ./node_modules/.bin/browserify script-reader.js -o bundle-reader.js",
+    "build": "./node_modules/.bin/browserify script-editor.js -o bundle-editor.js ; ./node_modules/.bin/browserify script-reader.js -o bundle-reader.js ;", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -13,7 +13,8 @@
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
+    "sharedb": "~1.0.0-beta.7",
     "sharedb-string-binding": "~1.0.0",
-    "sharedb": "~1.0.0-beta.7"
+    "socket.io": "^1.7.2"
   }
 }

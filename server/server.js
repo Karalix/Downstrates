@@ -29,6 +29,11 @@ var io = require('socket.io').listen(server);
 
 io.sockets.on('connection', function(socket){
     console.log('new user connected');
+
+
+    socket.on('disconnect', function(){
+        console.log('user diconnected');
+    })
 });
 
 // Connect any incoming WebSocket connection to ShareDB
