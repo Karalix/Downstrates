@@ -25,6 +25,11 @@ app.get('/', function(req, res){
 });
 
 var server = http.createServer(app);
+var io = require('socket.io').listen(server);
+
+io.sockets.on('connection', function(socket){
+    console.log('new user connected');
+});
 
 // Connect any incoming WebSocket connection to ShareDB
 var wss = new WebSocket.Server({server: server});
@@ -35,9 +40,3 @@ wss.on('connection', function(ws, req) {
 
 server.listen(8080);
 console.log('Listening on http://localhost:8080');
-
-/*
-chat.on('op', function(){
-    console.log(chat.data);
-})
-*/
