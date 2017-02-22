@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>DownStrates</title>
-    <link rel="stylesheet" href="/static/style-home.css">
+    <head>
+        <meta charset="utf-8">
+        <title>DownStrates</title>
+        <link rel="stylesheet" href="/static/style-home.css">
 
-</head>
-<body>
-    <h1>Downstrates</h1>
-    <p>Downstrates is a collaborative editor enabling you to edit and share page written using markdown.</p>
-    <p>To create and edit a new or existing document go to an URL like this one : 
-        <a id="edit-url" href="/edit/edit-me">localhost:8080/edit/</a>
-        <span contenteditable="true" id="editable-edit-url" class="editable-url-end">edit-me</span>
-        you can modify the URL at the left and click the link to see it in action !
-    </p>
-    <p>You can share an auto-updating document by copying links like this : 
-        <a id="read-url" href="/read/edit-me">localhost:8080/read/</a>
-        <span contenteditable="true" id="editable-read-url" class="editable-url-end">edit-me</span>
-        you can modify the URL at the left and click the link to see it in action !
-    </p>
-    <p>There is also the possibility to add your own widget to the editor, to do so, click the "Add Widget" button and copy the URL of the script containing the widget you want to add. You can try to add "/static/em_button.js"</p>
+    </head>
+    <body>
+        <h1>Downstrates</h1>
+        <p>Downstrates is a collaborative editor enabling you to edit and share page written using markdown.</p>
+        <p>To create and edit a new or existing document go to an URL like this one : 
+            <a id="edit-url" href="/edit/editme">hostname/edit/</a>
+            <span contenteditable="true" id="editable-edit-url" class="editable-url-end">editme</span>
+            you can modify the URL at the left and click the link to see it in action !
+        </p>
+        <p>You can share an auto-updating document by copying links like this : 
+            <a id="read-url" href="/read/editme">hostname/read/</a>
+            <span contenteditable="true" id="editable-read-url" class="editable-url-end">editme</span>
+            you can modify the URL at the left and click the link to see it in action !
+        </p>
+        <p>You can share a static version of a document by copying links like this : 
+            <a id="snap-url" href="/snap/editme">hostname/snap/</a>
+            <span contenteditable="true" id="editable-snap-url" class="editable-url-end">editme</span>
+            you can modify the URL at the left and click the link to see it in action !
+        </p>
+        <p>There is also the possibility to add your own widget to the editor, to do so, click the "Add Widget" button and copy the URL of the script containing the widget you want to add. You can try to add "/static/em_button.js"</p>
+        <p>Document names should not contain hyphens or dots in order to be able to get snaps of it.</p>
 
-    <script src="/static/script-home.js"></script>
-</body>
+        <script src="/static/script-home.js"></script>
+    </body>
+</html>

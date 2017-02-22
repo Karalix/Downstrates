@@ -2,43 +2,67 @@
   "name": "client",
   "version": "0.0.0",
   "dependencies": {
-    "sharedb-string-binding": {
-      "version": "1.0.0",
-      "from": "sharedb-string-binding@",
-      "dependencies": {
-        "text-diff-binding": {
-          "version": "1.1.0",
-          "from": "git+https://github.com/Karalix/text-diff-binding.git#Karalix-patch-1"
-        }
-      }
+    "abbrev": {
+      "version": "1.1.0",
+      "from": "abbrev@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.0.tgz"
+    },
+    "markdown": {
+      "version": "0.5.0",
+      "from": "markdown@>=0.5.0 <0.6.0",
+      "resolved": "https://registry.npmjs.org/markdown/-/markdown-0.5.0.tgz"
+    },
+    "nopt": {
+      "version": "2.1.2",
+      "from": "nopt@>=2.1.1 <2.2.0",
+      "resolved": "https://registry.npmjs.org/nopt/-/nopt-2.1.2.tgz"
     },
     "sharedb": {
       "version": "1.0.0-beta.7",
-      "from": "sharedb@",
+      "from": "sharedb@1.0.0-beta.7",
+      "resolved": "https://registry.npmjs.org/sharedb/-/sharedb-1.0.0-beta.7.tgz",
       "dependencies": {
         "arraydiff": {
           "version": "0.1.3",
-          "from": "arraydiff@^0.1.1"
+          "from": "arraydiff@0.1.3",
+          "resolved": "https://registry.npmjs.org/arraydiff/-/arraydiff-0.1.3.tgz"
         },
         "async": {
           "version": "1.5.2",
-          "from": "async@^1.4.2"
+          "from": "async@1.5.2",
+          "resolved": "https://registry.npmjs.org/async/-/async-1.5.2.tgz"
         },
         "deep-is": {
           "version": "0.1.3",
-          "from": "deep-is@^0.1.3"
+          "from": "deep-is@0.1.3",
+          "resolved": "https://registry.npmjs.org/deep-is/-/deep-is-0.1.3.tgz"
         },
         "hat": {
           "version": "0.0.3",
-          "from": "hat@0.0.3"
+          "from": "hat@0.0.3",
+          "resolved": "https://registry.npmjs.org/hat/-/hat-0.0.3.tgz"
         },
         "make-error": {
           "version": "1.2.1",
-          "from": "make-error@^1.1.1"
+          "from": "make-error@1.2.1",
+          "resolved": "https://registry.npmjs.org/make-error/-/make-error-1.2.1.tgz"
         },
         "ot-json0": {
           "version": "1.0.1",
-          "from": "ot-json0@^1.0.1"
+          "from": "ot-json0@1.0.1",
+          "resolved": "https://registry.npmjs.org/ot-json0/-/ot-json0-1.0.1.tgz"
+        }
+      }
+    },
+    "sharedb-string-binding": {
+      "version": "1.0.0",
+      "from": "sharedb-string-binding@1.0.0",
+      "resolved": "https://registry.npmjs.org/sharedb-string-binding/-/sharedb-string-binding-1.0.0.tgz",
+      "dependencies": {
+        "text-diff-binding": {
+          "version": "1.1.0",
+          "from": "git+https://github.com/Karalix/text-diff-binding.git#Karalix-patch-1",
+          "resolved": "git+https://github.com/Karalix/text-diff-binding.git#dbcedc6474ae70e914c712b0c99ef31c76d9f3d8"
         }
       }
     }
